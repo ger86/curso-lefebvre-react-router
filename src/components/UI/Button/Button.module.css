@@ -1,0 +1,11 @@
+.button {
+    font-weight: bold;
+}
+
+.button_lg {
+    padding: 32px;
+}
+
+.button_sm {
+    padding: 8px;
+}
