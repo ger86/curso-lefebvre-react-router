@@ -1,8 +1,10 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import {HOME, ABOUT_ME, CONTACT} from 'config/router/paths';
+import useMode from 'hooks/useMode';
 
 function Nav() {
+  const {mode, toggleMode} = useMode();
   return (
     <nav>
       <ul>
@@ -16,6 +18,7 @@ function Nav() {
           <NavLink to={CONTACT} activeClassName="nav-active">Contact</NavLink>
         </li>
       </ul>
+      <button onClick={toggleMode}>{mode}</button>
     </nav>
   );
 }
